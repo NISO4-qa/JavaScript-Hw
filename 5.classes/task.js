@@ -7,21 +7,21 @@ class PrintEditionItem {
 		this.type = null;
 	}
 
-fix(){
-    this.state *= 1.5;
-}
-set state(number) {
-    if (number < 0) {
-        this.state = 0;
-    } else if (number > 100) {
-        this.state = 100;
-    } else {
-        this._state = number;
-    }
-}
-get state() {
-    return this._state;
-}
+	fix() {
+		this.state *= 1.5;
+	}
+	set state(number) {
+		if (number < 0) {
+			this.state = 0;
+		} else if (number > 100) {
+			this.state = 100;
+		} else {
+			this._state = number;
+		}
+	}
+	get state() {
+		return this._state;
+	}
 }
 class Magazine extends PrintEditionItem {
 	constructor(name, releaseDate, pagesCount) {
